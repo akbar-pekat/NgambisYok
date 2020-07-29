@@ -12,7 +12,7 @@
   <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <a class="navbar-item" href="/">
-        <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+        <img src="../logo.png" height="30">
       </a>
       <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
         <span aria-hidden="true"></span>
@@ -28,19 +28,9 @@
         <a class="navbar-item">
           About Us
         </a>
-        <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link">
-            Classroom
-          </a>
-          <div class="navbar-dropdown">
-            <a class="navbar-item">
-              Frontend Developer <span class="tag is-success">New!</span>
-            </a>
-            <a class="navbar-item">
-              UI/UX Designer <span class="tag is-success">New!</span>
-            </a>
-          </div>
-        </div>
+        <a href="../index.html#classroom" class="navbar-item">
+          Classroom
+        </a>
       </div>
       <div class="navbar-end">
         <div class="navbar-item">
@@ -48,24 +38,29 @@
             <a class="button is-primary">
               <strong>Sign up</strong>
             </a>
-            <a class="button is-light">
-              Log in
+            <a href="#" class="button is-primary is-light">
+              Sign in
             </a>
           </div>
         </div>
       </div>
     </div>
   </nav>
+  <section class="hero is-primary is-medium">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">
+          Sign in
+        </h1>
+      </div>
+    </div>
+  </section>
   <section class="section">
     <div class="container">
-      <p class="subtitle">
-        Gunakan akun <strong>Ayok!</strong> milikmu untuk login
-      </p>
-      <br />
       <div class="field">
         <label class="label">Username</label>
         <div class="control">
-          <input class="input" type="text" placeholder="e.g alexsmith12" id="inputUSERNAME">
+          <input class="input" type="text" placeholder="Username" id="inputUSERNAME">
         </div>
       </div>
       <div class="field">
@@ -76,10 +71,10 @@
       </div>
       <div class="field is-grouped">
         <div class="control">
-          <button class="button is-link" onclick="funLOGIN();">Login</button>
+          <button class="button is-primary" onclick="funLOGIN();">Login</button>
         </div>
         <div class="control">
-          <button class="button is-link is-light">Sign Up</button>
+          <button class="button is-primary is-light">Register</button>
         </div>
       </div>
     </div>

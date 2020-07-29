@@ -44,8 +44,10 @@ function funLOGIN(){
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
       // User is signed in.
-      window.location.href = 'app/index.html';
+      window.location.href = '/app/index.html';
+      console.log("user");
     } else {
+      console.log("not");
       // No user is signed in.
       // console.log('Please Login');
     }
