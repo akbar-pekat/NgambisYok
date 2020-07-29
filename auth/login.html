@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login - Hello!</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+</head>
+
+<body>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/">
+        <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+      </a>
+      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+        <a href="/" class="navbar-item">
+          Home
+        </a>
+        <a class="navbar-item">
+          About Us
+        </a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            Classroom
+          </a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item">
+              Frontend Developer <span class="tag is-success">New!</span>
+            </a>
+            <a class="navbar-item">
+              UI/UX Designer <span class="tag is-success">New!</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a class="button is-primary">
+              <strong>Sign up</strong>
+            </a>
+            <a class="button is-light">
+              Log in
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <section class="section">
+    <div class="container">
+      <p class="subtitle">
+        Gunakan akun <strong>Ayok!</strong> milikmu untuk login
+      </p>
+      <br />
+      <div class="field">
+        <label class="label">Username</label>
+        <div class="control">
+          <input class="input" type="text" placeholder="e.g alexsmith12" id="inputUSERNAME">
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">Password</label>
+        <div class="control">
+          <input class="input" type="password" placeholder="Password" id="inputPASSWORD">
+        </div>
+      </div>
+      <div class="field is-grouped">
+        <div class="control">
+          <button class="button is-link" onclick="funLOGIN();">Login</button>
+        </div>
+        <div class="control">
+          <button class="button is-link is-light">Sign Up</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="modal" id="modalLOGIN">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+        <article class="message is-danger">
+          <div class="message-body">
+            <b>Oops! :(</b>
+            <p id="errormsg">Error</p>
+          </div>
+        </article>
+    </div>
+    <button class="modal-close is-large" aria-label="close" onclick="funCLOSE();"></button>
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-database.js"></script>
+  <script src="firebase.js" type="text/javascript" charset="utf-8"></script>
+  <script src="login.js" type="text/javascript" charset="utf-8"></script>
+</body>
+
+</html>
